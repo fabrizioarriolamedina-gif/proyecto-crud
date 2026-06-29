@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Empleados</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <style>
+    body { background-color: #f0f2f5; }
+    .navbar { background: linear-gradient(135deg, #1a73e8, #0d47a1); }
+    .navbar-brand { color: white !important; font-weight: 700; font-size: 1.3rem; }
+    .nav-link { color: rgba(255,255,255,0.85) !important; }
+    .nav-link:hover, .nav-link.active { color: white !important; }
+    .card { border: none; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .table thead { background: linear-gradient(135deg, #1a73e8, #0d47a1); color: white; }
+    .table thead th { border: none; font-weight: 500; }
+    .table tbody tr:hover { background-color: #f0f4ff; }
+    .btn-primary { background: linear-gradient(135deg, #1a73e8, #0d47a1); border: none; }
+    .btn-primary:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="/bienvenida.html">
+        <i class="bi bi-grid-fill me-2"></i>Prog4
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/bienvenida.html"><i class="bi bi-house me-1"></i>Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="bi bi-people me-1"></i>Empleados</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-body p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h4 class="mb-0"><i class="bi bi-people me-2"></i>Empleados</h4>
+          <a href="add_empleado.html" class="btn btn-primary">
+            <i class="bi bi-plus-circle me-2"></i>Agregar Empleado
+          </a>
+        </div>
+
+        <div id="error-message" class="alert alert-danger d-none"></div>
+
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th class="text-center">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="empleados-list"></tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/list_empleados.js"></script>
+</body>
+</html>

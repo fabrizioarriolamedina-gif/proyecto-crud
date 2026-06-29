@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenida</title>
+  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .nav-link:hover {
+      background-color: #495057;
+      color: #ffc107 !important;
+    }
+    .nav-link.active {
+      background-color: #212529;
+      color: #ffc107 !important;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-warning" href="#"><i class="bi bi-globe2"></i> Prog4</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-house-door"></i> Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/list_areas"><i class="bi bi-diagram-3"></i> Áreas</a></li>
+          <li class="nav-item"><a class="nav-link" href="/paises"><i class="bi bi-globe"></i> Países</a></li>
+          <li class="nav-item"><a class="nav-link" href="/categorias"><i class="bi bi-tags"></i> Categorías</a></li>
+          <li class="nav-item"><a class="nav-link" href="/marcas"><i class="bi bi-bookmark"></i> Marcas</a></li>
+          <li class="nav-item"><a class="nav-link" href="/proveedores"><i class="bi bi-truck"></i> Proveedores</a></li>
+          <li class="nav-item"><a class="nav-link" href="/list_productos"><i class="bi bi-box"></i> Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="/list_empleados"><i class="bi bi-people"></i> Empleados</a></li>
+          <li class="nav-item"><a class="nav-link" href="/list_compras"><i class="bi bi-cart"></i> Compras</a></li>
+          <li class="nav-item"><a class="nav-link" href="/list_ajustes"><i class="bi bi-sliders"></i> Ajustes</a></li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-danger" href="#"><i class="bi bi-box-arrow-right"></i> Salir</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class="card shadow-lg">
+      <div class="card-body">
+        <h1 class="card-title text-primary">¡Bienvenidos a mi Proyectooooo!</h1>
+        <p class="card-text">
+          Este es el inicio de mi futuro como Full Stack en <strong>Programación Web</strong>.
+        </p>
+        <p class="card-text">
+          Aprendere a construir sitios web, conectar bases de datos, y aplicar las mejores prácticas del desarrollo moderno.
+        </p>
+        <div class="alert alert-success mt-4" role="alert">
+          ¡La programación es una herramienta poderosa para transformar ideas en soluciones reales!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const links = document.querySelectorAll('.nav-link');
+    const currentPath = window.location.pathname;
+    links.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+
+</body>
+</html>

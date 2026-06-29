@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agregar Ajuste</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <style>
+    body { background-color: #f0f2f5; }
+    .card { border: none; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .card-header { background: linear-gradient(135deg, #1a73e8, #0d47a1); border-radius: 12px 12px 0 0 !important; }
+    .btn-primary { background: linear-gradient(135deg, #1a73e8, #0d47a1); border: none; }
+    .btn-primary:hover { opacity: 0.9; }
+    .form-label { font-weight: 500; color: #444; }
+    .form-control:focus, .form-select:focus { border-color: #1a73e8; box-shadow: 0 0 0 0.2rem rgba(26,115,232,0.15); }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="card">
+          <div class="card-header py-3 text-white">
+            <h4 class="mb-0"><i class="bi bi-plus-circle me-2"></i>Agregar Ajuste</h4>
+          </div>
+          <div class="card-body p-4">
+            <form id="add-ajuste-form">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="producto" class="form-label">Producto</label>
+                  <select class="form-select" id="producto" required>
+                    <option value="" disabled selected>Seleccione un producto</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="empleado" class="form-label">Empleado</label>
+                  <select class="form-select" id="empleado" required>
+                    <option value="" disabled selected>Seleccione un empleado</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="fecha" class="form-label">Fecha</label>
+                  <input type="date" class="form-control" id="fecha" required/>
+                </div>
+                <div class="col-md-6">
+                  <label for="tipo_ajuste" class="form-label">Tipo de Ajuste</label>
+                  <select class="form-select" id="tipo_ajuste" required>
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="E">Entrada (suma existencia)</option>
+                    <option value="S">Salida (resta existencia)</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="cantidad" class="form-label">Cantidad</label>
+                  <input type="number" class="form-control" id="cantidad" step="0.01" min="0" required/>
+                </div>
+                <div class="col-md-6">
+                  <label for="precio_costo" class="form-label">Precio Costo</label>
+                  <div class="input-group">
+                    <span class="input-group-text">₲</span>
+                    <input type="number" class="form-control" id="precio_costo" step="0.01" min="0" required/>
+                  </div>
+                </div>
+              </div>
+              <div id="error-message" class="alert alert-danger mt-3 d-none"></div>
+              <div class="d-flex gap-2 mt-4">
+                <button type="submit" class="btn btn-primary px-4">
+                  <i class="bi bi-plus-circle me-2"></i>Agregar Ajuste
+                </button>
+                <a href="list_ajustes.html" class="btn btn-outline-secondary px-4">
+                  <i class="bi bi-arrow-left me-2"></i>Volver
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/add_ajuste.js"></script>
+</body>
+</html>
