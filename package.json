@@ -1,0 +1,19 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.6",
+    "express": "^5.1.0",
+    "odbc": "^2.4.9",
+    "path": "^0.12.7",
+    "sybase": "^1.2.3"
+  }
+}
